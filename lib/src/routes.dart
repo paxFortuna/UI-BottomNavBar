@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:ui_switch_between_page/src/bottom_tab_bar.dart';
 import 'package:ui_switch_between_page/src/pages/home.dart';
 import 'package:ui_switch_between_page/src/pages/profile.dart';
-import 'package:ui_switch_between_page/src/pages/search.dart';
 
 class Routes extends StatelessWidget {
   const Routes({Key? key}) : super(key: key);
@@ -32,7 +31,7 @@ class Routes extends StatelessWidget {
               decoration: _boxDecoration(),
               child: _button(
                 context,
-                SearchPage(),
+                HomePage(),
                 ' ImageSlider',
               ),
             ),

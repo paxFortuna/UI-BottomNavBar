@@ -3,7 +3,7 @@ import 'package:flutter_boxicons/flutter_boxicons.dart';
 
 import 'pages/home.dart';
 import 'pages/profile.dart';
-import 'pages/search.dart';
+import 'pages/search/search.dart';
 
 class BottomTabBar extends StatefulWidget {
   const BottomTabBar({Key? key}) : super(key: key);
