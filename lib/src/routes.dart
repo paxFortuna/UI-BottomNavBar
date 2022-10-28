@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui_switch_between_page/src/bottom_tab_bar.dart';
-import 'package:ui_switch_between_page/src/pages/home.dart';
+import 'package:ui_switch_between_page/src/pages/home/home.dart';
 import 'package:ui_switch_between_page/src/pages/profile.dart';
 
 class Routes extends StatelessWidget {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_boxicons/flutter_boxicons.dart';
 
-import 'pages/home.dart';
+import 'pages/home/home.dart';
 import 'pages/profile.dart';
 import 'pages/search/search.dart';
 
