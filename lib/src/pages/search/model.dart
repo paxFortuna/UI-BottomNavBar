@@ -15,12 +15,12 @@ final List<MovieModel> main_movies_list = [
     'https://cdn.britannica.com/55/188355-050-D5E49258/Salvatore-Corsitto-The-Godfather-Marlon-Brando-Francis.jpg',
     9.2,
   ),
-  MovieModel(
-    'Stranger Things',
-    2016,
-    'https://img.estadao.com.br/fotos/crop/1200x900/resources/jpg/4/6/1645119257464.jpg',
-    8.7,
-  ),
+  // MovieModel(
+  //   'Stranger Things',
+  //   2016,
+  //   'https://img.estadao.com.br/fotos/crop/1200x900/resources/jpg/4/6/1645119257464.jpg',
+  //   8.7,
+  // ),
   MovieModel(
     'Prison Break',
     2005,

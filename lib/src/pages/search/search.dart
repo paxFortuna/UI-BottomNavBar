@@ -11,13 +11,14 @@ class SearchPage extends StatefulWidget {
 }
 
 class _SearchPageState extends State<SearchPage> {
-  List<MovieModel> display_list = List.from(main_movies_list);
+  // List<MovieModel> display_list = List.from(main_movies_list);
 
   void updateLlist(String value) {
     setState(() {
       display_list = main_movies_list
           .where(
-              (e) => e.movie_name!.toLowerCase().contains(value.toLowerCase()))
+              (e) => e.movie_name!.toLowerCase()
+                  .contains(value.toLowerCase()))
           .toList();
     });
   }
@@ -25,7 +26,7 @@ class _SearchPageState extends State<SearchPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 227, 227, 227),
+      backgroundColor: const Color.fromARGB(255, 227, 227, 227),
       body: Padding(
         padding: const EdgeInsets.only(top: 55),
         child: Column(
@@ -41,7 +42,7 @@ class _SearchPageState extends State<SearchPage> {
               child: TextField(
                 onChanged: (value) => updateLlist(value),
                 decoration: InputDecoration(
-                  prefixIcon: Icon(Icons.search),
+                  prefixIcon: const Icon(Icons.search),
                   hintText: 'Search Movies',
                   hintStyle: TextStyle(color: Colors.grey.shade700),
                   filled: true,
@@ -57,20 +58,19 @@ class _SearchPageState extends State<SearchPage> {
               child: ListView.builder(
                   itemCount: display_list.length,
                   itemBuilder: (context, index) {
-                    return ListTile(
-                      contentPadding: EdgeInsets.only(left: 30, right: 30),
-                      leading: ClipRRect(
-                        borderRadius: BorderRadius.circular(5),
-                        child: Image.network(
-                          '${display_list[index].movie_poster}',
-                          width: 75,
-                          height: double.infinity,
-                          fit: BoxFit.cover,
-                        ),
-                      ),
+                    return display_list.length == 0 ?
+                        Center(child: Text('No results Found',
+                        style: TextStyle(
+                        color: Colors.grey.shade700,
+                            fontSize: 30,
+                            fontWeight: FontWeight.bold),
+                        ),)
+                        : ListTile(
+                      contentPadding: const EdgeInsets.only(left: 30, right: 30),
+
                       title: Text(
                         display_list[index].movie_name!,
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Color.fromARGB(255, 0, 0, 0),
                         ),
                       ),
@@ -80,11 +80,19 @@ class _SearchPageState extends State<SearchPage> {
                         style: TextStyle(color: Colors.grey.shade600),
                       ),
                       trailing: Text(
-                        '${display_list[index]..movie_rating}',
-                        style: TextStyle(
+                        '${display_list[index].movie_rating}',
+                        style: const TextStyle(
                             color: Color.fromARGB(255, 128, 123, 23)),
                       ),
-
+                      leading: ClipRRect(
+                        borderRadius: BorderRadius.circular(5),
+                        child: Image.network(
+                          '${display_list[index].movie_poster}',
+                          width: 75,
+                          height: double.infinity,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
                     );
                   }),
             )
