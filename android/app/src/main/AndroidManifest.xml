@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.ui_switch_between_page">
+    <uses-permission android:name="android.permission.INTERNET"/>
    <application
         android:label="ui_switch_between_page"
         android:name="${applicationName}"

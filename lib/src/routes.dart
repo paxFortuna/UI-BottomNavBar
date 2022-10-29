@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:ui_switch_between_page/src/bottom_tab_bar.dart';
 import 'package:ui_switch_between_page/src/pages/home/home.dart';
-import 'package:ui_switch_between_page/src/pages/profile.dart';
+import 'package:ui_switch_between_page/src/pages/share/share_image_link.dart';
+
+import 'pages/share/dark_light_theme.dart';
 
 class Routes extends StatelessWidget {
   const Routes({Key? key}) : super(key: key);
@@ -12,22 +14,31 @@ class Routes extends StatelessWidget {
       backgroundColor: Colors.grey.shade300,
       body: Center(
         child: Column(
+          mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              decoration: _boxDecoration(),
-              child: _button(context, BottomTabBar(), 'BottomTapBar'),
-            ),
-            const SizedBox(height: 15),
-            Container(
+              width: 200,
               decoration: _boxDecoration(),
               child: _button(
                 context,
-                ProfilePage(),
+                BottomTabBar(),
+                'BottomTapBar',
+              ),
+            ),
+            const SizedBox(height: 15),
+            Container(
+              width: 200,
+              decoration: _boxDecoration(),
+              child: _button(
+                context,
+                DarkLightTheme(),
                 'ChoiceChipSelector',
               ),
             ),
+            const SizedBox(height: 15),
             Container(
+              width: 200,
               decoration: _boxDecoration(),
               child: _button(
                 context,
@@ -35,17 +46,33 @@ class Routes extends StatelessWidget {
                 ' ImageSlider',
               ),
             ),
-            ElevatedButton(
-              onPressed: () {},
-              child: Text(''),
+            const SizedBox(height: 15),
+            Container(
+              width: 200,
+              decoration: _boxDecoration(),
+              child: _button(
+                context,
+                ShareImageAndLink(),
+                'ShareImageAndLink',
+              ),
             ),
-            ElevatedButton(
-              onPressed: () {},
-              child: Text(''),
+            const SizedBox(height: 15),
+            Container(
+              width: 200,
+              decoration: _boxDecoration(),
+              child: ElevatedButton(
+                onPressed: () {},
+                child: Text(''),
+              ),
             ),
-            ElevatedButton(
-              onPressed: () {},
-              child: Text(''),
+            const SizedBox(height: 15),
+            Container(
+              width: 200,
+              decoration: _boxDecoration(),
+              child: ElevatedButton(
+                onPressed: () {},
+                child: Text(''),
+              ),
             ),
             ElevatedButton(
               onPressed: () {},

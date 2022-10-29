@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ui_switch_between_page/src/bottom_tab_bar.dart';
 
-import 'src/bottom_tab_bar.dart';
-import 'src/routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: Routes(),
+      home: BottomTabBar(),
     );
   }
 }

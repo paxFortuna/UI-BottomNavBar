@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_boxicons/flutter_boxicons.dart';
 
 import 'pages/home/home.dart';
-import 'pages/profile.dart';
+import 'pages/on_boarding/on_board_screen.dart';
 import 'pages/search/search.dart';
+import 'pages/share/share_image_link.dart';
 
 class BottomTabBar extends StatefulWidget {
   const BottomTabBar({Key? key}) : super(key: key);
@@ -17,7 +18,8 @@ class _BottomTabBarState extends State<BottomTabBar> {
   final screens = [
     HomePage(),
     SearchPage(),
-    ProfilePage(),
+    ShareImageAndLink(),
+    OnBoardingScreen(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -32,7 +34,8 @@ class _BottomTabBarState extends State<BottomTabBar> {
               });
             },
 
-            backgroundColor: const Color.fromARGB(255, 227, 227, 227),
+            //backgroundColor: const Color.fromARGB(255, 227, 227, 227),
+            backgroundColor: Colors.grey.shade400,
             items: const [
               BottomNavigationBarItem(
                 icon: Icon(Boxicons.bx_home_circle),
@@ -43,8 +46,12 @@ class _BottomTabBarState extends State<BottomTabBar> {
                 label: 'Search',
               ),
               BottomNavigationBarItem(
-                icon: Icon(Boxicons.bxs_user),
-                label: 'Profile',
+                icon: Icon(Boxicons.bx_user),
+                label: 'Share',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Boxicons.bxs_backpack),
+                label: 'OnBoard',
               )
             ]));
   }

@@ -18,6 +18,9 @@ class _HomePageState extends State<HomePage> {
     return _isLoading ? LoadingPage()
     : Scaffold(
       backgroundColor:  Color.fromARGB(255, 227, 227, 227),
+      appBar: AppBar(
+        title: Text('LoadingPage'),
+      ),
       body: Padding(
         padding: const EdgeInsets.only(bottom: 25),
         child: Column(
